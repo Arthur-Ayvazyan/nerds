@@ -1,0 +1,231 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+@include reset();
+
+
+body{
+	font-family: 'roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+}
+
+img{
+	max-width: 100%;
+}
+
+input:focus, button:focus, input, button{
+	outline: none;
+}
+
+label{
+	position: relative;
+	&::before, &::after{
+		transition: opacity .2s ease-in-out;
+	}
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+button{
+	outline: none;
+	border: none;
+}
+
+
+
+//--------------------------------------------------------
+.container{
+	@include wrapper();
+}
+
+.container-full{
+	@include wrapper-full(); 
+}
+.content{
+	padding-top: 61px;
+	@include md(padding-top, 31px );
+}
+
+
+// addination classes
+.scroll-hidden{
+	overflow: hidden;
+}
+
+.menu.menu_active{
+	left: 0;
+}
+
+
+.burger_active span{
+	height: 0			
+}
+.burger_active span:before{
+	transform: rotate(-135deg)
+}
+.burger_active span:after{
+	transform: rotate(135deg)
+}
+
+// text settings ---------------------
+
+.heading-1{
+	font-size: $heading-1;
+	// line-height: 1em;
+	font-weight: 500;
+}
+
+.heading-2{
+	font-size: $heading-2;
+	// line-height: 1em;
+	font-weight: 500;
+}
+.heading-3{
+	font-size: $heading-3;
+	// line-height: 1em;
+	font-weight: 700;
+}
+.heading-4{
+	font-size: $heading-4;
+	text-transform: uppercase;
+	// line-height: 1em;
+	font-weight: 700;
+}
+
+.filter-title{
+	font-size: 18px;
+	// line-height: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.text{
+	color: $main-text-color;
+	font-size: $main-text-size;
+	font-weight: 400;
+}
+
+.text-black{
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+// button settings -----------------------
+
+.btn{
+	display: block;
+	outline: none;
+	cursor: pointer;
+	padding: 16px 0 18px;
+	@extend .text-black;
+	transition: .2s ease-in-out;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.btn-red{
+	@extend .btn;
+	background: $redFill;
+	color: $redText;
+	border-top: 3px solid $redFill;
+	&:hover{
+		background: $redFill_hover;
+		color: $redText_hover;
+		border-top: 3px solid $redFill_hover;
+	}
+	&:active{
+		background: $redFill_click;
+		color: $redText_click;
+		border-top: 3px solid $redBorder;
+	}
+}
+
+.btn-green{
+	@extend .btn;
+	background: $greenFill;
+	color: $greenText;
+	border-top: 3px solid $greenFill;
+	&:hover{
+		background: $greenFill_hover;
+		color: $greenText_hover;
+		border-top: 3px solid $greenFill_hover;
+	}
+	&:active{
+		background: $greenFill_click;
+		color: $greenText_click;
+		border-top: 3px solid $greenBorder;
+	}
+}
+
+.btn-yellow{
+	@extend .btn;
+	background: $yellowFill;
+	color: $yellowText;
+	border-top: 3px solid $yellowFill;
+	&:hover{
+		background: $yellowFill_hover;
+		color: $yellowText_hover;
+		border-top: 3px solid $yellowFill_hover;
+	}
+	&:active{
+		background: $yellowFill_click;
+		color: $yellowText_click;
+		border-top: 3px solid $yellowBorder;
+	}
+}
+
+
+.btn-grey{
+	@extend .btn;
+	background: $greyFill;
+	color: $greyText;
+	border-top: 3px solid $greyFill;
+	&:hover{
+		background: $greyFill_hover;
+		color: $greyText_hover;
+		border-top: 3px solid $greyFill_hover;
+	}
+	&:active{
+		background: $greyFill_click;
+		color: $greyText_click;
+		border-top: 3px solid $greyBorder;
+	}
+}
+
+
+.input{
+	@extend .text;
+	color: $inputText;
+	border: 2px solid $inputBorder;
+	transition: .2s;
+	&:hover{
+		color: $inputText_hover;
+		border: 2px solid $inputBorder_hover;
+	}
+	&:focus{
+		color: $inputText_focuse;
+		border: 2px solid $inputBorder_focuse;
+	}
+	&:invalid{
+		color: $inputText_disable;
+		border: 2px solid $inputBorder_disable;
+	}
+}
+

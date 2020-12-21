@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>shop</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://api-maps.yandex.ru/2.1/?apikey=89141838-8573-4409-8d8e-e9b666f7fabb&lang=ru_RU" type="text/javascript"></script>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="shop-page">
+@@include('./_header.html')
+
+<div class="content">
+
+<div class="content">
+
+	<div class="shop-header">
+	<div class="container">
+		<div class="shop-header__content">
+			<h1 class="shop-header__heading">Магазин готовых шаблонов</h1>
+		</div>
+	</div>
+</div><!-- shop-header -->
+
+<div class="shop-wrapper">
+	<div class="container">
+		<div class="shop">
+		 	<div class="side-bar">
+		 		<div class="menu-closer ">
+					<div class="menu-closer__btn"></div>
+		 		</div>
+		 		<div class="filters left-filter">
+		 			<form action="#" class="left-filter-form">      
+		 				<div class="filter price-filter">
+		 					<div class="filter__title">СТОИМОСТЬ:</div>
+		 					<div class="ranges">
+			 						<div class="price-field">
+			 							<input type="range" min="0" max="15500" value="135" class="ranges-slide__item" id="lower">
+			 							<input type="range" min="0" max="15500" value="5500" class="ranges-slide__item" id="upper">
+			 						</div>	
+			 						<div class="price-container">
+				 						<div class="price-input-wrap">
+				 							 <label for="two">ОТ</label>
+		         					 <input id="two">
+				 						</div>
+				 						<div class="price-input-wrap">
+				 							 <label for="two">ДО</label>
+		         					 <input id="two">
+				 						</div>
+			 						</div>
+		 					</div>
+
+		 				</div>
+		 				<div class="filter grid-filter">
+		 					<div class="filter__title">Сетка:</div>
+	 						<div class="radios">
+		 						<div class="radio">
+		 							<input type="radio" disabled name="grid" value="adaptive" class="radio__input" id="radio-1">
+		 							<label for="radio-1" class="radio__label">Адаптивная</label>
+		 						</div>		 						
+		 						<div class="radio">
+		 							<input type="radio" name="grid" value="fixed" class="radio__input" id="radio-2">
+		 							<label for="radio-2" class="radio__label">Фиксированная</label>
+		 						</div>		 						
+		 						<div class="radio">
+		 							<input type="radio" name="grid" value="responsive" class="radio__input" id="radio-3">
+		 							<label for="radio-3" class="radio__label">Резиновая</label>
+	 							</div>
+		 					</div>
+		 				</div>
+
+		 				<div class="filter feature-filter">
+		 					<div class="filter__title">ОСОБЕННОСТИ:</div>
+		 					<div class="checkboxs">
+		 						<div class="checkbox">
+		 							<input type="checkbox" class="checkbox__input" id="checkbox-1">
+		 							<label for="checkbox-1" class="checkbox__label">Слайдер</label>
+	 							</div>		 						
+	 							<div class="checkbox">
+		 							<input type="checkbox" class="checkbox__input" id="checkbox-2">
+		 							<label for="checkbox-2" class="checkbox__label">Блок преимуществ</label>
+	 							</div>		 						
+	 							<div class="checkbox">
+		 							<input type="checkbox" class="checkbox__input" id="checkbox-3">
+		 							<label for="checkbox-3" class="checkbox__label">Новости</label>
+	 							</div>		 						
+	 							<div class="checkbox">
+		 							<input type="checkbox" class="checkbox__input" id="checkbox-4">
+		 							<label for="checkbox-4" class="checkbox__label">Галерея</label>
+	 							</div>		 						
+	 							<div class="checkbox">
+		 							<input type="checkbox" disabled class="checkbox__input" id="checkbox-5">
+		 							<label for="checkbox-5" class="checkbox__label">Корзина</label>
+	 							</div>
+		 					</div>
+		 				</div>
+		 				<div class="button-show">
+		 					<button type="submit" class="button-show__item">ПОКАЗАТЬ</button>
+		 				</div>
+		 			</form>
+		 		</div>
+		 	</div>
+		 	<!-- left bar -->
+		 	<div class="catalog">
+		 		<div class="top-filter">
+		 			<div id="filterBurger" class="filter__burger"></div>
+		 			<div class="filter sort">
+		 				<div class="filter__title sort__title">СОРТИРОВАТЬ:</div>
+						<ul class="sort-wrap">
+							<li class="sort__item sort__item-active">По цене</li>
+							<li class="sort__item">По типу</li>
+							<li class="sort__item">По названию</li>
+							<li class="sort__item sort-down sort-down-active"></li>
+							<li class="sort__item sort-up"></li>
+						</ul>
+		 			</div>
+		 		</div>
+		 		<!-- top-filter -->
+
+		 		<div class="cards">
+		 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_1.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_2.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_3.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_4.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 					 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_5.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 			<div class="card">
+		 				<div class="card__header"></div>
+		 				<div class="card__photo">
+		 					<img src="img/catalog/img_6.jpg" alt="" class="card__img">
+		 				</div>
+		 				<div class="card__info info-card">
+		 					<h4 class="info-card__title">Sedona</h4>
+		 					<p class="info-card__discr">Информационный сайт для туристов</p>
+		 					<a href="#!" class="info-card__price">9 900 руб.</a>
+		 				</div>
+		 			</div>
+		 			
+		 		</div><!-- cards -->
+		 		<!-- catalog-content -->
+		 		<div class="pages">
+		 			<a href="#!" class="pages__item">1</a>
+		 			<a href="#!" class="pages__item pages__item-active">2</a>
+		 			<a href="#!" class="pages__item">3</a>
+		 			<a href="#!" class="pages__item pages__next">следующая</a>
+		 		</div>
+		 		<!-- pages -->
+		 	</div>
+		</div>
+	</div>
+</div>
+	
+	
+</div>
+<!-- content -->
+
+ @@include('./_map.html')
+ @@include('./_footer.html')
+<script src="js/script.min.js"></script>
+
+
+</body>
+</html>

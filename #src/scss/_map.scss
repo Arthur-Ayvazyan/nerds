@@ -1,0 +1,259 @@
+.map-block{
+	position: relative;
+	height: 410px;
+	width: 100%;
+	@include xs-block(){
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.map {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	@include xs-block(){
+		position: static;
+		order: 2;
+	}
+}
+.address {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -560px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	@include xs-block(){
+		position: static;
+		order: 1;
+		text-align: center;
+	}
+	@media screen and (max-width: 1200px){
+		padding-left: 20px;
+		left: 20px;
+		margin-left: 0;
+		// padding-left: 20px;
+		// margin-left: -300px;
+	}
+}
+.address-wrapper{
+	@include row-flex();
+}
+.address-info {
+	margin-top: 50px;
+	padding: 54px 50px 47px 50px;
+	width: 320px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background-color: #fff;
+	@include xs-block(){
+		margin-top: 0px;
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+		max-width: 300px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	// .address-info__title
+	&__title {
+		@extend .text-black;
+		font-weight: 700;
+		margin-bottom: 32px;
+	}
+	&__address{
+		@extend .text;
+		color: #666;
+		line-height: 18px;
+		margin-bottom: 22px;
+	}
+	// .address-info__phone
+	&__phone {
+		@extend .text;
+		color: #666; 
+		line-height: 18px;
+		margin-bottom: 37px;
+	}
+	// .address-info__button
+	&__button {
+		@extend .btn-red;
+		// padding-left: 95px;
+		width: 219px;
+		// padding-right: 95px;
+	}
+}
+
+
+
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 8;
+	width: 100vw;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	@include sm-block(){
+		padding: 0 30px;
+	}
+	@include xs-block(){
+		padding: 0 15px;
+	}
+}
+.modal_active{
+	display: flex;
+}
+.popup {
+	width: 100%;
+	max-width: 1032px;
+	background: #fff;
+	box-shadow: 0px 20px 40px 0px;
+	position: relative;
+
+}
+
+.popup-body{
+	position: relative;
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 75px 0 85px 0;
+	@include sm-block(){
+		padding: 35px 0 35px 0;
+	}
+	@include xs-block(){
+		padding: 20px 0 20px 0;
+
+	}
+
+}
+.popup-closer{
+	position: absolute;
+	z-index: 2;
+	right: 0;
+	top: 96px;
+	width: 21px;
+	height: 21px;
+	transition: ease-in .2s;
+	@include sm-block(){
+		right: 18px;
+		top: 56px;
+	}
+	@include xs-block(){
+		top: 28px;
+	}
+	background: url('../img/icons/icons.svg#close-cross') 0 0 / contain no-repeat;
+	&:hover{
+		background: url('../img/icons/icons.svg#close-cross_hover') 0 0 / contain no-repeat;
+	}	
+	&:active{
+		background: url('../img/icons/icons.svg#close-cross_active') 0 0 / contain no-repeat;
+	}
+}
+
+.writeUs {
+	position: relative;
+	@include row-flex();
+	margin: 0 auto;
+	@include sm-block(){
+		padding: 0 10px;
+	}
+	@include xs-block(){
+		padding: 0;
+	}
+	&__heading{
+		font-weight: 500;
+		color: #000;
+		margin-bottom: 49px;
+		flex: 1 1 100%; 
+		@include col();		@extend .heading-2;
+		@include adaptiv-font(41, 24);
+
+		@include size(12);
+		@include xs(margin-bottom, 30px);
+	}
+	& label{
+		display: block;
+		@extend .text-black;
+		font-weight: 700;
+		margin-bottom: 11px;
+		line-height: 18px;
+		@include xs(font-size, 14px);
+		@include xs(margin-bottom, 7px);
+
+	}
+	// .writeUs__name
+	&__name {
+		width: 100%;
+		@extend .input;
+		padding: 16px;
+		border-radius: 4px;
+		margin-bottom: 32px;
+		@include xs(margin-bottom, 20px);
+		@include xs(font-size,  14px);
+	}
+	// .writeUs__email
+	&__email {
+		width: 100%;
+		@extend .input;
+		padding: 16px;
+		border-radius: 4px;
+		margin-bottom: 32px;
+		@include xs(margin-bottom, 20px);
+		@include xs(font-size, 14px );
+
+	}
+	&__text{
+		width: 100%;
+		@extend .input;
+		padding: 16px;
+		border-radius: 4px;
+		margin-bottom: 47px;
+		min-height: 114px;
+		@include xs(margin-bottom, 20px);
+		@include xs(font-size,  14px);
+	}
+	// .writeUs__btn
+	&__btn {
+		@extend .btn-red;
+		width: 240px;
+		@include sm-block(){
+			margin: 0 auto;
+		}
+		@include xs(margin-bottom, 10px);
+		// @include xs(width, 100%);
+	}
+}
+.form-name {
+	@include col();
+	@include size(6);
+	// width: calc(50% - 40px)
+	@include size-xs(12);
+}
+.form-email {
+	@include col();
+	@include size(6);
+	// width: calc(50% - 40px)
+	@include size-xs(12);
+}
+.form-text {
+	@include col();
+	@include size(12);
+	// flex: 1 1 100%;
+}
+.form-btn {
+	@include col();
+	@include size(12);
+	// flex: 1 1 100%;
+}

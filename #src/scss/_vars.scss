@@ -1,0 +1,113 @@
+// --------------------  container  ----------------------
+$maxWidth: 1200px;
+
+// --------------------  text-size  ----------------------
+$main-text-color: #283136;
+$main-text-size: 16px;
+
+$heading-1: 55px;
+$heading-2: 45px;
+$heading-3: 36px;
+$heading-4: 24px;
+
+// --------------------  colors  ----------------------
+$grey: #eee;
+
+// input type text
+$inputBorder: #d7dcde;
+$inputBorder_hover: #b4b9bb;
+$inputBorder_focuse: #000;
+$inputBorder_disable: #e74246;
+
+$inputText: #a1a1a1;
+$inputText_hover: #a1a1a1;
+$inputText_focuse: #444444;
+$inputText_disable: #e74246;
+
+// grey
+$greyFill: #eeeeee;
+$greyFill_hover: #dfdfdf;
+$greyFill_click: #d5d5d5;
+
+$greyText: #3f3f3f;
+$greyText_hover: #2d2d2d;
+$greyText_click: #959595;
+
+$greyBorder: #bfbfbf;
+
+// red
+$redFill: #fb565a;
+$redFill_hover: #e74246;
+$redFill_click: #d7373b;
+
+$redText: #fff;
+$redText_hover: #fce6e6;
+$redText_click: #e37376;
+
+$redBorder: #c13135;
+
+//  green
+$greenFill: #00ca74;
+$greenFill_hover: #00bc6c;
+$greenFill_click: #00aa62;
+
+$greenText: #fff;
+$greenText_hover: #ddf6eb;
+$greenText_click: #4dc491;
+
+$greenBorder: #009958;
+
+// yellow
+$yellowFill: #efc84a;
+$yellowFill_hover: #eab534;
+$yellowFill_click: #e5a722;
+
+$yellowText: #fff;
+$yellowText_hover: #f9ebc9;
+$yellowText_click: #edc265;
+
+$yellowBorder: #ce961f;
+
+// links
+
+$linkColor: #000;
+$linkColor_hover: #fb565a;
+$linkColor_active: #b2b2b2;
+
+// cards
+$card-fill: #e9e9e9;
+$card_hover: #4d4d4d;
+$card_info: #eeeeee;
+
+// logo
+
+$logo_fill: #000;
+$logo_hover: #303030;
+$logo_active: #a6a6a6;
+
+//  pattern...........................???
+
+// .btn{
+// 	cursor: pointer;
+// 	padding: 16px 0 18px;
+// 	@extend .some-text;
+// 	transition: .2s ease-in-out;
+// 	border-radius: 4px;
+// }
+
+// .some-btn{
+// 	@extend .btn;
+// 	background: $someFill;
+// 	color: $someText;
+// 	border-top: 3px solid $someFill;
+// 	&:hover{
+// 		background: $someFill_hover;
+// 		color: $someText_hover;
+// 		border-top: 3px solid $someFill_hover;
+// 	}
+// 	&:active{
+// 		background: $someFill_click;
+// 		color: $someText_click;
+// 		border-top: 3px solid $someBorder;
+// 	}
+// }

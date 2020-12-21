@@ -1,0 +1,252 @@
+.burger {
+	@include col();
+	position: relative;
+	z-index: 5;
+	display: none;
+	width: 40px;
+	height: 40px;
+	transition: .2s;
+	position: relative;
+	cursor: pointer;
+	@include md-block(){
+		display: block;
+		@include size(2);
+
+	}
+	// .burger_item
+	&_item {
+		position: absolute;
+		// width: 100%;
+		width: calc(40px - 5px);
+		height: 2px;
+		background: #000;
+		border-radius: 5px;
+		top: 50%;
+		margin-top: -2px;
+		&:before, &:after{
+			content: ('');
+			display: blocks;
+			position: absolute;
+			// width: calc(100% - 5px);
+			width: 100%;
+			height: 2px;
+			background: #000;
+			border-radius: 5px;
+			transition: .3s;
+		}
+		&::before {
+			transform: translateY(-8px)
+		}
+		&::after {	
+			transform: translateY(8px)
+		}
+	}
+}
+
+
+.home-header {
+
+	background-color: $grey;
+	width: 100vw;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	left: 0;
+	@include md(padding-top, 0);
+	transition: padding .2s;
+};
+
+// .padding_off{
+// 	padding: 0;
+// }
+
+
+.nav {
+	position: relative;
+	@include row-flex();
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	z-index: 6;
+	&:before{
+		content: ('');
+		display: block;
+		position: absolute;
+		z-index: 4;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $grey;
+	}
+	@include md(height, 50px)
+};
+
+.logo {
+	position: relative;
+	z-index: 5;
+	@include col();
+	@include size(2);
+	@include md-block(){
+		text-align: center;
+		@include size(4);
+	}
+	// .logo__img
+	&__img {
+		max-height: 55px;
+		@include md-block(){
+			max-height: 40px;
+		}
+		@include sm-block(){
+			max-height: 30px;
+		}
+	}
+}
+.menu {
+	position: relative;
+	z-index: 4;
+	@include size(8);
+	@include md-block(){
+		transition: .4s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-top: 80px;
+		position: fixed;
+		top: 0;
+		left: 110%;
+		width: 100vw;
+		height: 100vh;
+		z-index: 3;
+		background: #fff;
+		overflow: auto;
+	}
+}
+
+.menu-list {
+	@include row-flex();
+	justify-content: center;
+	align-items: center;
+	@include md-block(){
+		flex-direction: column;
+		width: 100%;
+	}
+	// .menu-list__item
+	&__item {
+		@include col();
+		cursor: pointer;
+		margin: 0 20px;
+		border: 3px solid transparent;
+		border-radius: 5px;
+		transition: .2s;
+		// &:hover{
+			// border-bottom-color: red; 
+		// }
+		@include md-block(){
+			border: none;
+			border-radius: 0;
+			margin: 0;			
+			width: 100%;
+			margin-bottom: 10px;
+			&:hover{
+				background-color: $grey;
+			}
+		}
+	}
+	// .menu-list__link
+	&__link {
+		@extend .text-black;
+		transition: .1s;
+		color: $linkColor;
+		display: block;
+		padding: 15px 0;
+		&:hover{
+			color: $linkColor_hover;
+		}		
+		&:active{
+			color: $linkColor_active;
+		}
+		@include md-block(){
+			font-size: 22px;
+			text-align: center;
+			letter-spacing: 3px;
+			padding: 20px 0;
+		}
+	}
+}
+.cart {
+	position: relative;
+	z-index: 5;
+	@include size(2);
+	@include col();
+	display: flex;
+	justify-content: flex-end;
+	&__content{
+		cursor: pointer;
+		border: 3px solid transparent;
+		border-radius: 5px;
+		transition: .2s;
+		// &:hover{
+		// border-bottom-color: red; 
+		// }
+		@include md(border, none);
+	}
+		// .cart__link
+	&__link {		
+		transition: .1s;
+		@extend .text-black;
+		color: $linkColor;
+		display: block;
+		padding: 15px 0;
+		padding-left: 45px;	background: url('../img/icons/icons.svg#cart-icon') 0 center / 17px no-repeat;
+
+		&:hover{
+			color: $linkColor_hover;
+		}		
+		&:active{
+			color: $linkColor_active;
+		}
+		@include md-block(){
+			padding-left: 35px;
+			background-size: 20px; 
+		}	
+		@include sm-block(){
+			background: url('../img/icons/icons.svg#cart-icon') 0px center / 28px no-repeat;
+		}
+	}
+	// .cart__text
+	&__text {
+		@include sm(display, none )
+	}
+};
+
+
+
+.cont__padding{
+	padding-top: 160px;
+}
+
+// shop-header start
+
+.shop-header {
+	background: #eee;
+	height: 250px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include md(height, 200px);
+	@include sm(height, 170px);
+	@include xs(height, 130px);
+	// .shop-header__content
+	&__content {
+		text-align: center;
+	}
+	&__heading{
+		@include adaptiv-font(46, 26);
+		font-weight: 500;
+	}
+}
+
+
+
+// shop-header end
